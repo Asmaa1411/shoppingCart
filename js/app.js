@@ -2,19 +2,19 @@ document.addEventListener('DOMContentLoaded', function() {
   const cart = JSON.parse(localStorage.getItem('cart')) || [];
   
   // Redirect if not logged in
-  if (['/pages/cart/cart.html', '/pages/products/products.html'].some(page => window.location.pathname.includes(page))) {
+  if (['../pages/cart/cart.html', '../pages/products/products.html'].some(page => window.location.pathname.includes(page))) {
       if (!localStorage.getItem('loggedInUser')) {
-          window.location.href = '/pages/login/login.html';
+          window.location.href = '../pages/login/login.html';
       }
   }
 
   // Login functionality
-  if (window.location.pathname.includes('/pages/login/login.html')) {
+  if (window.location.pathname.includes('../pages/login/login.html')) {
       document.getElementById('loginForm').addEventListener('submit', function(e) {
           e.preventDefault();
           const email = document.getElementById('email').value;
           localStorage.setItem('loggedInUser', email);
-          window.location.href = '/index.html';
+          window.location.href = '../index.html';
       });
   }
 
@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function() {
     localStorage.removeItem('cart'); // Optionally clear the cart as well
 
     // Redirect to login page
-    window.location.href = '/pages/login/login.html';
+    window.location.href = '../pages/login/login.html';
   });
 
   // Update cart count from localStorage
@@ -36,14 +36,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Add event listener to the cart button
   document.getElementById('cartButton').addEventListener('click', function() {
-    window.location.href = '/pages/cart/cart.html'; // Navigate to the cart page
+    window.location.href = '../pages/cart/cart.html'; // Navigate to the cart page
   });
 
 
   
 
   // Add to Cart functionality on Products page
-  if (window.location.pathname.includes('/pages/products/products.html')) {
+  if (window.location.pathname.includes('../pages/products/products.html')) {
       document.querySelectorAll('.add-to-cart').forEach(button => {
           button.addEventListener('click', function() {
               const productName = this.getAttribute('data-product');
@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   // Display Cart Items on Cart page
-  if (window.location.pathname.includes('/pages/cart/cart.html')) {
+  if (window.location.pathname.includes('../pages/cart/cart.html')) {
       const cartItemsContainer = document.getElementById('cartItems');
       const totalPriceElement = document.getElementById('totalPrice');
       let totalPrice = 0;
@@ -127,7 +127,7 @@ document.addEventListener('DOMContentLoaded', function() {
   const cartButton = document.getElementById('cartButton');
   if (cartButton) {
       cartButton.addEventListener('click', function() {
-          window.location.href = '/pages/cart/cart.html';
+          window.location.href = '../pages/cart/cart.html';
       });
   }
 
