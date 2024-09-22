@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
           e.preventDefault();
           const email = document.getElementById('email').value;
           localStorage.setItem('loggedInUser', email);
-          window.location.href = '/pages/home/home.html';
+          window.location.href = '/index.html';
       });
   }
 
