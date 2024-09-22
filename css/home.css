@@ -1,0 +1,53 @@
+body {
+    background-color: #ffffff;
+    font-family: 'Inter', sans-serif;
+  }
+
+
+  .main-title {
+    font-family: 'Vegan Style', serif;
+    font-weight: 300;
+    color: #333;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    text-align: center;
+  }
+
+  .main-title .italic {
+    font-style: italic;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-right: 20px;
+  }
+  
+  p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+  }
+
+  /* Footer Styles */
+.footer {
+  background-color:  #292929;
+  color: #ffffff;
+  padding: 20px 0;
+}
+
+.footer p {
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.footer a.footer-link {
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0 10px;
+}
+
+.footer a.footer-link:hover {
+  text-decoration: underline;
+}
+
+  
