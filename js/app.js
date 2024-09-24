@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const cart = JSON.parse(localStorage.getItem('cart')) || [];
 
     // Redirect if not logged in
-    if (['/pages/cart/cart.html', '/pages/products/products.html'].some(page => window.location.pathname.includes(page))) {
+    if (['pages/cart/cart.html', 'pages/products/products.html'].some(page => window.location.pathname.includes(page))) {
         if (!localStorage.getItem('loggedInUser')) {
             window.location.href = '/pages/login/login.html'; // Updated path
         }
