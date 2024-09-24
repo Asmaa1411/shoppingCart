@@ -4,7 +4,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // Redirect if not logged in
     if (['pages/cart/cart.html', 'pages/products/products.html'].some(page => window.location.pathname.includes(page))) {
         if (!localStorage.getItem('loggedInUser')) {
-            window.location.href = '/pages/login/login.html'; // Updated path
+            window.location.href = 'pages/login/login.html'; // Updated path
         }
     }
 
